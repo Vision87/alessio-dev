@@ -9,9 +9,9 @@ export default function Projects() {
         Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {visibleProjects.map((project, i) => (
+        {visibleProjects.map((project) => (
           <div
-            key={i}
+            key={project.title}
             className="bg-[#1e3a5f] rounded-lg p-6 flex flex-col gap-3 border border-white/5"
           >
             <div className="flex items-start justify-between gap-2">

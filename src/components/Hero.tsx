@@ -2,7 +2,7 @@ import { bio } from '@/content/data'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 pt-20 max-w-4xl mx-auto">
+    <section id="hero" className="min-h-screen flex flex-col justify-center px-6 pt-20 max-w-4xl mx-auto">
       <p className="text-[#64b5f6] text-xs font-mono mb-3 tracking-widest uppercase">
         Hi, I&apos;m
       </p>
