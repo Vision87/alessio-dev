@@ -7,8 +7,8 @@ import { bio } from '@/content/data'
 
 const inter = Inter({ subsets: ['latin'], display: 'optional' })
 
-// TODO: Replace 'https://alessiomoioli.com' with your real domain before deploying
-const siteUrl = 'https://alessiomoioli.com'
+// Primary canonical domain — .it and .eu redirect here via vercel.json
+const siteUrl = 'https://www.alessiomoioli.com'
 
 export const viewport: Viewport = {
   themeColor: '#0d1b2a',

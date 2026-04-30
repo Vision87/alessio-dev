@@ -1,4 +1,18 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.alessiomoioli.it" }],
+      "destination": "https://www.alessiomoioli.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.alessiomoioli.eu" }],
+      "destination": "https://www.alessiomoioli.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/_next/static/(.*)",
