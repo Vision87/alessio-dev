@@ -48,7 +48,7 @@ const jsonLd = {
   worksFor: { '@type': 'Organization', name: bio.company },
   address: { '@type': 'PostalAddress', addressLocality: 'Milan', addressCountry: 'IT' },
   url: siteUrl,
-  sameAs: [bio.github, bio.linkedin],
+  sameAs: [bio.github, bio.githubVision87, bio.linkedin],
   description: bio.tagline,
 }
 

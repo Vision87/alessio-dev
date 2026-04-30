@@ -37,10 +37,19 @@ export default function Hero() {
           href={bio.github}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub profile (opens in new tab)"
+          aria-label="GitHub AMoioli profile (opens in new tab)"
           className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
         >
-          GitHub
+          AMoioli
+        </a>
+        <a
+          href={bio.githubVision87}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Vision87 profile (opens in new tab)"
+          className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
+        >
+          Vision87
         </a>
         <a
           href={bio.linkedin}

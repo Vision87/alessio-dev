@@ -15,10 +15,19 @@ export default function Contact() {
           href={bio.github}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub profile (opens in new tab)"
+          aria-label="GitHub AMoioli profile (opens in new tab)"
           className="text-white/70 hover:text-white transition-colors text-sm"
         >
-          GitHub
+          GitHub / AMoioli
+        </a>
+        <a
+          href={bio.githubVision87}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Vision87 profile (opens in new tab)"
+          className="text-white/70 hover:text-white transition-colors text-sm"
+        >
+          GitHub / Vision87
         </a>
         <a
           href={bio.linkedin}

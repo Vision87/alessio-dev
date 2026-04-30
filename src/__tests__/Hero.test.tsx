@@ -13,9 +13,17 @@ describe('Hero', () => {
     expect(screen.getByText(/Paramount/)).toBeInTheDocument()
   })
 
-  it('renders GitHub link', () => {
+  it('renders AMoioli GitHub link', () => {
     render(<Hero />)
-    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /AMoioli/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('github')
+    )
+  })
+
+  it('renders Vision87 GitHub link', () => {
+    render(<Hero />)
+    expect(screen.getByRole('link', { name: /Vision87/i })).toHaveAttribute(
       'href',
       expect.stringContaining('github')
     )

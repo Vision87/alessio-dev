@@ -19,7 +19,8 @@ export const bio = {
   about:
     "I'm a curious software engineer with over a decade of experience building large-scale web products. Currently at Paramount, I help ship Paramount+ to 28 countries — working across frontend architecture, GraphQL APIs, and streaming infrastructure. I care deeply about code quality, developer experience, and mentoring engineers.",
   email: 'alessio.moioli.87@gmail.com',
-  github: 'https://github.com/alessiom', // TODO: replace with your real GitHub URL
+  github: 'https://github.com/AMoioli',
+  githubVision87: 'https://github.com/Vision87',
   linkedin: 'https://it.linkedin.com/in/alessio-moioli-b3775220',
 }
 
