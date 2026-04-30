@@ -61,10 +61,34 @@ export const projects: Project[] = [
 
 export const certifications: Certification[] = [
   {
-    name: 'GraphQL Developer — Professional',
-    issuer: 'The Linux Foundation',
-    year: '2023',
-    // url: '', // TODO: add your credential verification URL
+    name: 'Graph Developer — Professional',
+    issuer: 'Apollo GraphQL',
+    year: '2024',
+  },
+  {
+    name: 'Graph Developer — Associate',
+    issuer: 'Apollo GraphQL',
+    year: '2024',
+  },
+  {
+    name: 'Docker for Developers',
+    issuer: 'LinkedIn Learning',
+    year: '2020',
+  },
+  {
+    name: 'PHP 7 New Features',
+    issuer: 'LinkedIn Learning',
+    year: '2020',
+  },
+  {
+    name: 'PHP: Testing Legacy Applications',
+    issuer: 'LinkedIn Learning',
+    year: '2020',
+  },
+  {
+    name: 'Balancing Multiple Roles as a Leader',
+    issuer: 'LinkedIn Learning',
+    year: '2024',
   },
 ]
 
