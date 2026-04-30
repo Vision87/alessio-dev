@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     type: 'website',
     url: '/',
     siteName: bio.name,
-    // TODO: create /public/og-image.png (1200×630) before deploying
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${bio.name} — ${bio.title}` }],
   },
   twitter: {
