@@ -1,7 +1,7 @@
 export interface Metric { value: string; label: string }
 export interface SkillGroup { category: string; items: string[] }
 export interface ExperienceEntry { company: string; role: string; period: string; bullets: string[] }
-export interface Project { title: string; description: string; tags: string[]; link?: string; type: 'professional' | 'personal' }
+export interface Project { title: string; description: string; tags: string[]; link?: string; type: 'professional' | 'personal'; account: 'AMoioli' | 'Vision87' }
 export interface Certification { name: string; issuer: string; year: string; url?: string }
 export interface WritingEntry { title: string; outlet: string; year: string; url: string; type: 'article' | 'talk' }
 
@@ -54,6 +54,7 @@ export const projects: Project[] = [
     tags: ['React', 'GraphQL', 'TypeScript', 'Node.js'],
     link: 'https://www.paramountplus.com',
     type: 'professional',
+    account: 'AMoioli',
   },
 ]
 
