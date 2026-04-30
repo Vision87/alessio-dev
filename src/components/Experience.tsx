@@ -2,18 +2,25 @@ import { experience } from '@/content/data'
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 max-w-4xl mx-auto">
-      <h2 className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10">
+    <section id="experience" aria-labelledby="experience-heading" className="py-24 px-6 max-w-4xl mx-auto">
+      <h2
+        id="experience-heading"
+        className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10"
+      >
         Experience
       </h2>
-      <div className="space-y-12">
+      <ol className="space-y-12 list-none p-0">
         {experience.map((job) => (
-          <div key={job.company} className="border-l-2 border-[#1e3a5f] pl-6">
+          <li key={job.company} className="relative border-l-2 border-[#64b5f6]/30 pl-6">
+            <span
+              className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#64b5f6]/60 border-2 border-[#0d1b2a]"
+              aria-hidden="true"
+            />
             <div className="flex flex-wrap items-baseline gap-2 mb-1">
               <h3 className="text-white font-bold">{job.role}</h3>
               <span className="text-[#64b5f6]">@ {job.company}</span>
             </div>
-            <p className="text-white/40 text-sm mb-4">{job.period}</p>
+            <p className="text-white/60 text-sm mb-4">{job.period}</p>
             <ul className="space-y-2">
               {job.bullets.map((bullet) => (
                 <li key={bullet} className="text-white/70 text-sm leading-relaxed flex gap-3">
@@ -22,9 +29,9 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   )
 }

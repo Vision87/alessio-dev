@@ -2,16 +2,20 @@ import { bio } from '@/content/data'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-4">
+    <section id="contact" aria-labelledby="contact-heading" className="py-24 px-6 max-w-4xl mx-auto text-center">
+      <h2
+        id="contact-heading"
+        className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-4"
+      >
         Contact
       </h2>
-      <p className="text-white/50 mb-10 text-sm">Let&apos;s connect.</p>
+      <p className="text-white/70 mb-10 text-sm">Let&apos;s connect.</p>
       <div className="flex justify-center gap-8">
         <a
           href={bio.github}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub profile (opens in new tab)"
           className="text-white/70 hover:text-white transition-colors text-sm"
         >
           GitHub
@@ -20,12 +24,14 @@ export default function Contact() {
           href={bio.linkedin}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn profile (opens in new tab)"
           className="text-white/70 hover:text-white transition-colors text-sm"
         >
           LinkedIn
         </a>
         <a
           href={`mailto:${bio.email}`}
+          aria-label="Send email to Alessio Moioli"
           className="text-white/70 hover:text-white transition-colors text-sm"
         >
           Email

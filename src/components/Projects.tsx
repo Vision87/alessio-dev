@@ -1,16 +1,17 @@
 import { projects } from '@/content/data'
 
 export default function Projects() {
-  const visibleProjects = projects.filter((p) => p.type === 'professional')
-
   return (
-    <section id="projects" className="py-24 px-6 max-w-4xl mx-auto">
-      <h2 className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10">
+    <section id="projects" aria-labelledby="projects-heading" className="py-24 px-6 max-w-4xl mx-auto">
+      <h2
+        id="projects-heading"
+        className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10"
+      >
         Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {visibleProjects.map((project) => (
-          <div
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0 m-0" role="list">
+        {projects.map((project) => (
+          <li
             key={project.title}
             className="bg-[#1e3a5f] rounded-lg p-6 flex flex-col gap-3 border border-white/5"
           >
@@ -29,7 +30,7 @@ export default function Projects() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-white/50 bg-white/5 px-2 py-0.5 rounded"
+                  className="text-xs text-white/60 bg-white/5 px-2 py-0.5 rounded"
                 >
                   {tag}
                 </span>
@@ -40,14 +41,15 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View ${project.title} project (opens in new tab)`}
                 className="text-[#64b5f6] text-sm hover:underline mt-auto"
               >
-                View Project →
+                View Project<span aria-hidden="true"> →</span>
               </a>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }
