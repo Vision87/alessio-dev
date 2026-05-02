@@ -11,7 +11,7 @@ export default function Experience() {
       </h2>
       <ol className="space-y-12 list-none p-0">
         {experience.map((job) => (
-          <li key={job.company} className="relative border-l-2 border-[#64b5f6]/30 pl-6">
+          <li key={`${job.company}-${job.role}`} className="relative border-l-2 border-[#64b5f6]/30 pl-6">
             <span
               className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#64b5f6]/60 border-2 border-[#0d1b2a]"
               aria-hidden="true"

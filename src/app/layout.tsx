@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: `${bio.name} — ${bio.title}`,
   description: bio.tagline,
-  keywords: ['Alessio Moioli', 'Senior Software Engineer', 'React', 'Next.js', 'GraphQL', 'Paramount', 'Milan'],
+  keywords: ['Alessio Moioli', 'Manager Software Engineering', 'Engineering Manager', 'React', 'Next.js', 'GraphQL', 'Paramount', 'Milan'],
   authors: [{ name: bio.name }],
   openGraph: {
     title: `${bio.name} — ${bio.title}`,

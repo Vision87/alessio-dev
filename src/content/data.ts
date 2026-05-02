@@ -7,17 +7,17 @@ export interface WritingEntry { title: string; outlet: string; year: string; url
 
 export const bio = {
   name: 'Alessio Moioli',
-  title: 'Senior Software Engineer',
+  title: 'Manager Software Engineering',
   company: 'Paramount',
   location: 'Milan, Italy',
-  tagline: '10+ years building large-scale streaming products for millions of viewers worldwide.',
+  tagline: '15+ years delivering innovative web solutions and leading international engineering teams.',
   metrics: [
     { value: '28', label: 'Countries' },
-    { value: '10+', label: 'Years' },
+    { value: '15+', label: 'Years' },
     { value: 'M+', label: 'Viewers/Day' },
   ] as Metric[],
   about:
-    "I'm a curious software engineer with over a decade of experience building large-scale web products. Currently at Paramount, I help ship Paramount+ to 28 countries — working across frontend architecture, GraphQL APIs, and streaming infrastructure. I care deeply about code quality, developer experience, and mentoring engineers.",
+    "I'm a software engineering manager with over 15 years of experience delivering innovative web solutions and leading international teams. At Paramount I orchestrate the engineering strategy for Paramount+, shipping the SVOD platform across 28 countries. I care deeply about developer experience, architectural decisions, cross-functional collaboration, and growing the engineers around me.",
   email: 'alessio.moioli.87@gmail.com',
   github: 'https://github.com/AMoioli',
   githubVision87: 'https://github.com/Vision87',
@@ -25,24 +25,102 @@ export const bio = {
 }
 
 export const skills: SkillGroup[] = [
-  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS'] },
+  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'VueJS', 'XState', 'Module Federation', 'HTML/CSS'] },
   { category: 'Backend', items: ['Node.js', 'GraphQL', 'PHP', 'REST APIs'] },
+  { category: 'Mobile', items: ['Swift', 'Obj-C'] },
   { category: 'Tools & Infrastructure', items: ['Docker', 'Git', 'CI/CD', 'Apollo GraphQL'] },
-  {
-    category: 'Languages',
-    items: ['Italian (native)', 'English (professional)', 'Japanese (basic)'],
-  },
+  { category: 'Leadership', items: ['Engineering Management', 'International Team Management', 'Agile Methodologies', 'Project Workflow Optimisation'] },
+  { category: 'Languages', items: ['Italian (native)', 'English (professional)', 'Japanese (basic)'] },
 ]
 
 export const experience: ExperienceEntry[] = [
   {
     company: 'Paramount',
-    role: 'Senior Software Engineer',
-    period: '2020 – present',
+    role: 'Manager Software Engineering',
+    period: 'Oct 2022 – present',
     bullets: [
-      'Led frontend architecture for Paramount+, launching the SVOD platform across 28 countries.',
-      'Built and maintained GraphQL APIs powering millions of streaming sessions daily.',
-      'Mentored engineers across the team, improving code quality and development practices.',
+      'Orchestrate the strategic direction for engineering projects, improving delivery timelines through optimised workflows.',
+      'Coordinate AI agents to execute both simple and complex tasks, enhancing productivity and delivering significant value.',
+      'Mentor and develop a diverse international team of engineers, increasing team productivity and satisfaction.',
+      'Create and discuss ADRs to support business and feature team objectives.',
+      'Support feature teams across new (Next.js, React, GraphQL, TypeScript, Module Federation, TanStack) and legacy (PHP, Nginx, Vue.js) stacks.',
+    ],
+  },
+  {
+    company: 'Paramount',
+    role: 'Lead Software Engineer',
+    period: 'Feb 2022 – Oct 2022',
+    bullets: [
+      'Designed and deployed modular architecture using Next.js, improving code reusability and reducing development time.',
+      'Established TypeScript best practices for junior developers, increasing team proficiency and reducing onboarding time.',
+      'Spearheaded Docker integration into the development pipeline, streamlining deployments and minimising downtime.',
+    ],
+  },
+  {
+    company: 'ViacomCBS',
+    role: 'Lead Software Engineer',
+    period: 'Oct 2021 – Feb 2022',
+    bullets: [
+      'Drove migration of legacy systems to modern frameworks, improving performance and user experience.',
+      'Implemented Agile methodologies that led to a 50% increase in delivery efficiency across multiple teams.',
+      'Mentored engineers on code quality, resulting in a 30% decrease in technical debt escalations.',
+    ],
+  },
+  {
+    company: 'Viacom',
+    role: 'Software Engineer',
+    period: 'Nov 2019 – Oct 2021',
+    bullets: [
+      'Developed and maintained web applications using PHP and JavaScript, delivering scalable solutions.',
+      'Participated in the shift to CI/CD, enabling more timely releases and reducing production bugs by 20%.',
+      'Collaborated with stakeholders to clarify requirements and provide technical insight.',
+    ],
+  },
+  {
+    company: 'Viacom',
+    role: 'Software Developer',
+    period: 'Dec 2016 – Nov 2019',
+    bullets: [
+      'Contributed to the development of digital products through coding, testing, and code reviews.',
+      'Implemented coding standards that significantly improved code quality across the team.',
+      'Engaged with clients to gather feedback and tailor applications to evolving requirements.',
+    ],
+  },
+  {
+    company: 'T4 PROJECT',
+    role: 'Web & Mobile Developer Consultant',
+    period: 'Jun 2013 – Nov 2019',
+    bullets: [
+      'Provided expert consultancy on web and mobile application development for multiple clients.',
+      'Delivered high-quality solutions leveraging cutting-edge technologies, increasing client engagement.',
+      'Conducted training sessions for client teams on new technologies and processes.',
+    ],
+  },
+  {
+    company: 'Dodicitrenta Digital Creative Studio',
+    role: 'Web Developer',
+    period: 'Mar 2011 – Jun 2013',
+    bullets: [
+      'Designed and implemented responsive websites focused on user experience and accessibility.',
+      'Managed multiple projects simultaneously, ensuring timely delivery to client specifications.',
+    ],
+  },
+  {
+    company: 'Interjob',
+    role: 'Web Developer',
+    period: 'Apr 2010 – Mar 2011',
+    bullets: [
+      'Developed and maintained web applications using PHP, MySQL, and JavaScript.',
+      'Optimised existing code and implemented best practices throughout the development lifecycle.',
+    ],
+  },
+  {
+    company: 'S3-Store',
+    role: 'Junior Web Developer',
+    period: 'Jan 2009 – Jan 2010',
+    bullets: [
+      'Assisted in creating interactive HTML applications and conducted testing and debugging.',
+      'Collaborated with senior developers to learn best practices and gradually took on independent tasks.',
     ],
   },
 ]

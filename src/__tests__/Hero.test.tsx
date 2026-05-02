@@ -9,7 +9,7 @@ describe('Hero', () => {
 
   it('renders title and company', () => {
     render(<Hero />)
-    expect(screen.getByText(/Senior Software Engineer/)).toBeInTheDocument()
+    expect(screen.getByText(/Manager Software Engineering/)).toBeInTheDocument()
     expect(screen.getByText(/Paramount/)).toBeInTheDocument()
   })
 

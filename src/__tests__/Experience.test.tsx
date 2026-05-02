@@ -6,8 +6,8 @@ describe('Experience', () => {
   it('renders company name and role for each entry', () => {
     render(<Experience />)
     experience.forEach((job) => {
-      expect(screen.getByText(`@ ${job.company}`)).toBeInTheDocument()
-      expect(screen.getByText(job.role)).toBeInTheDocument()
+      expect(screen.getAllByText(`@ ${job.company}`).length).toBeGreaterThan(0)
+      expect(screen.getAllByText(job.role).length).toBeGreaterThan(0)
     })
   })
 
