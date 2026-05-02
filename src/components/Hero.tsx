@@ -66,6 +66,14 @@ export default function Hero() {
         >
           Email
         </a>
+        <a
+          href={bio.cv}
+          download
+          aria-label="Download CV as PDF"
+          className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
+        >
+          Download CV
+        </a>
       </div>
     </section>
   )

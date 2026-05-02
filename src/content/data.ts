@@ -17,7 +17,8 @@ export const bio = {
     { value: 'M+', label: 'Viewers/Day' },
   ] as Metric[],
   about:
-    "I am a passionate Software Engineering Manager at Paramount, where I lead international development teams to deliver large-scale web projects and global digital solutions. With over a decade of experience in the software development industry, Alessio has established himself as a versatile technical leader with a deep focus on building efficient workflows and high-performing engineering pipelines. Currently based in the Greater Milan Metropolitan Area, Alessio oversees complex engineering initiatives within the global media landscape, having previously served as a Lead Software Engineer for a major international entertainment organization. His career is marked by a strong track record at world-renowned media and technology firms, where he played a key role in developing robust web architectures and managing the technical execution of large-scale digital projects, such as the global launch of the platform Paramount+. His earlier experience as a Web and Mobile Developer Consultant further broadened his expertise across multiple platforms and diversified tech stacks. A curious and methodical professional, Alessio specializes in modern web technologies including GraphQL, React.js, TypeScript, and Next.js. He is particularly recognized for his ability to foster collaboration across diverse cultures and time zones, leveraging open dialogue to drive innovation and achieve superior outcomes. His leadership philosophy is built on the value of diverse perspectives and the continuous professional growth of his teams. A frequent traveler and lifelong learner, he remains dedicated to discovering new perspectives that ignite curiosity and creativity in the ever-evolving world of software engineering.",
+    "I am a passionate Software Engineering Manager at Paramount, where I lead international development teams to deliver large-scale web projects and global digital solutions. With over a decade of experience in the software development industry, I have established myself as a versatile technical leader with a deep focus on building efficient workflows and high-performing engineering pipelines. Currently based in the Greater Milan Metropolitan Area, I oversee complex engineering initiatives within the global media landscape, having previously served as a Lead Software Engineer for a major international entertainment organization. My career is marked by a strong track record at world-renowned media and technology firms, where I played a key role in developing robust web architectures and managing the technical execution of large-scale digital projects, such as the global launch of Paramount+. My earlier experience as a Web and Mobile Developer Consultant further broadened my expertise across multiple platforms and diversified tech stacks. A curious and methodical professional, I specialise in modern web technologies including GraphQL, React.js, TypeScript, and Next.js. I am particularly recognised for my ability to foster collaboration across diverse cultures and time zones, leveraging open dialogue to drive innovation and achieve superior outcomes. My leadership philosophy is built on the value of diverse perspectives and the continuous professional growth of my teams. A frequent traveller and lifelong learner, I remain dedicated to discovering new perspectives that ignite curiosity and creativity in the ever-evolving world of software engineering.",
+  cv: '/cv.pdf',
   email: 'alessio.moioli.87@gmail.com',
   github: 'https://github.com/AMoioli',
   githubVision87: 'https://github.com/Vision87',
@@ -142,11 +143,13 @@ export const certifications: Certification[] = [
     name: 'Graph Developer — Professional',
     issuer: 'Apollo GraphQL',
     year: '2024',
+    url: 'https://www.apollographql.com/tutorials/certifications/apollo-graph-professional',
   },
   {
     name: 'Graph Developer — Associate',
     issuer: 'Apollo GraphQL',
     year: '2024',
+    url: 'https://www.apollographql.com/tutorials/certifications/apollo-graph-associate',
   },
   {
     name: 'Docker for Developers',
