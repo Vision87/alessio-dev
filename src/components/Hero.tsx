@@ -1,7 +1,12 @@
+'use client'
+
 import { bio } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 export default function Hero() {
+  const t = useTranslations('hero')
+
   return (
     <section
       id="hero"
@@ -13,7 +18,7 @@ export default function Hero() {
           aria-hidden="true"
           className="text-[#64b5f6] text-xs font-mono mb-3 tracking-widest uppercase"
         >
-          Hi, I&apos;m
+          {t('greeting')}
         </p>
       </FadeIn>
       <FadeIn delay={0.05}>
@@ -29,7 +34,7 @@ export default function Hero() {
         <p className="text-white/60 text-sm mb-8">{bio.location}</p>
       </FadeIn>
       <FadeIn delay={0.15}>
-        <p className="text-lg text-white/80 max-w-xl leading-relaxed">{bio.tagline}</p>
+        <p className="text-lg text-white/80 max-w-xl leading-relaxed">{t('tagline')}</p>
       </FadeIn>
       {bio.metrics && bio.metrics.length > 0 && (
         <FadeIn delay={0.2}>
@@ -49,7 +54,7 @@ export default function Hero() {
             href={bio.github}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub AMoioli profile (opens in new tab)"
+            aria-label={t('githubAmoioliLabel')}
             className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
           >
             AMoioli
@@ -58,7 +63,7 @@ export default function Hero() {
             href={bio.githubVision87}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub Vision87 profile (opens in new tab)"
+            aria-label={t('githubVision87Label')}
             className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
           >
             Vision87
@@ -67,7 +72,7 @@ export default function Hero() {
             href={bio.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn profile (opens in new tab)"
+            aria-label={t('linkedinLabel')}
             className="text-sm font-semibold bg-[#64b5f6] text-[#0d1b2a] border border-[#64b5f6] hover:bg-[#64b5f6]/90 transition-colors px-4 py-2 rounded"
           >
             LinkedIn
@@ -76,15 +81,15 @@ export default function Hero() {
             href={`mailto:${bio.email}`}
             className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
           >
-            Email
+            {t('email')}
           </a>
           <a
             href={bio.cv}
             download
-            aria-label="Download CV as PDF"
+            aria-label={t('cvLabel')}
             className="text-sm text-white/70 hover:text-white transition-colors border border-white/20 hover:border-white/50 px-4 py-2 rounded"
           >
-            Download CV
+            {t('downloadCv')}
           </a>
         </div>
       </FadeIn>

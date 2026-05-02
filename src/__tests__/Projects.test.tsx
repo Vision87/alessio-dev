@@ -1,10 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import Projects from '@/components/Projects'
 import { projects } from '@/content/data'
+import { renderWithIntl } from './utils'
 
 describe('Projects', () => {
   it('renders all professional projects', () => {
-    render(<Projects />)
+    renderWithIntl(<Projects />)
     const professional = projects.filter((p) => p.type === 'professional')
     professional.forEach((project) => {
       expect(screen.getByText(project.title)).toBeInTheDocument()
@@ -13,12 +14,12 @@ describe('Projects', () => {
   })
 
   it('does not show the Personal badge when no personal projects are present', () => {
-    render(<Projects />)
+    renderWithIntl(<Projects />)
     expect(screen.queryByText('Personal')).not.toBeInTheDocument()
   })
 
   it('renders tags for each visible project', () => {
-    render(<Projects />)
+    renderWithIntl(<Projects />)
     const firstProject = projects.find((p) => p.type === 'professional')!
     firstProject.tags.forEach((tag) => {
       expect(screen.getAllByText(tag).length).toBeGreaterThan(0)

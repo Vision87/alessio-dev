@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.alessiomoioli.it" }],
       "destination": "https://www.alessiomoioli.com/$1",

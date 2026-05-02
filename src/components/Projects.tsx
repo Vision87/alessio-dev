@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { projects } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 type Account = 'AMoioli' | 'Vision87'
@@ -9,6 +10,7 @@ type Account = 'AMoioli' | 'Vision87'
 const TABS: Account[] = ['AMoioli', 'Vision87']
 
 export default function Projects() {
+  const t = useTranslations('projects')
   const [active, setActive] = useState<Account>('AMoioli')
 
   const filtered = projects.filter((p) => p.account === active)
@@ -20,30 +22,34 @@ export default function Projects() {
           id="projects-heading"
           className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-8"
         >
-          Projects
+          {t('heading')}
         </h2>
       </FadeIn>
 
       {/* Tabs */}
       <FadeIn delay={0.1}>
-      <div className="flex gap-1 mb-8 border-b border-white/10" role="tablist" aria-label="GitHub account">
-        {TABS.map((tab) => (
-          <button
-            key={tab}
-            role="tab"
-            aria-selected={active === tab}
-            aria-controls={`tabpanel-${tab}`}
-            onClick={() => setActive(tab)}
-            className={`px-4 py-2 text-sm font-mono rounded-t transition-colors ${
-              active === tab
-                ? 'text-[#64b5f6] border-b-2 border-[#64b5f6] -mb-px bg-white/5'
-                : 'text-white/50 hover:text-white/80'
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
+        <div
+          className="flex gap-1 mb-8 border-b border-white/10"
+          role="tablist"
+          aria-label={t('tabsLabel')}
+        >
+          {TABS.map((tab) => (
+            <button
+              key={tab}
+              role="tab"
+              aria-selected={active === tab}
+              aria-controls={`tabpanel-${tab}`}
+              onClick={() => setActive(tab)}
+              className={`px-4 py-2 text-sm font-mono rounded-t transition-colors ${
+                active === tab
+                  ? 'text-[#64b5f6] border-b-2 border-[#64b5f6] -mb-px bg-white/5'
+                  : 'text-white/50 hover:text-white/80'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
       </FadeIn>
 
       {/* Panel */}
@@ -54,7 +60,7 @@ export default function Projects() {
       >
         {filtered.length === 0 ? (
           <p className="text-white/40 text-sm py-12 text-center">
-            No projects yet for{' '}
+            {t('noProjects')}{' '}
             <a
               href={`https://github.com/${active}`}
               target="_blank"
@@ -76,7 +82,7 @@ export default function Projects() {
                   <h3 className="text-white font-bold">{project.title}</h3>
                   {project.type === 'personal' && (
                     <span className="text-xs bg-[#64b5f6]/20 text-[#64b5f6] px-2 py-0.5 rounded shrink-0">
-                      Personal
+                      {t('personal')}
                     </span>
                   )}
                 </div>
@@ -98,10 +104,10 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.title} project (opens in new tab)`}
+                    aria-label={`${t('viewProject')} ${project.title} (${t('opensInNewTab')})`}
                     className="text-[#64b5f6] text-sm hover:underline mt-auto"
                   >
-                    View Project<span aria-hidden="true"> →</span>
+                    {t('viewProject')}<span aria-hidden="true"> →</span>
                   </a>
                 )}
               </li>

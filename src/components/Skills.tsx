@@ -1,7 +1,12 @@
+'use client'
+
 import { skills } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 export default function Skills() {
+  const t = useTranslations('skills')
+
   return (
     <section id="skills" aria-labelledby="skills-heading" className="py-24 px-6 max-w-4xl mx-auto">
       <FadeIn>
@@ -9,7 +14,7 @@ export default function Skills() {
           id="skills-heading"
           className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10"
         >
-          Skills
+          {t('heading')}
         </h2>
       </FadeIn>
       <div className="space-y-8">

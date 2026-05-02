@@ -1,7 +1,12 @@
+'use client'
+
 import { certifications } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 export default function Certifications() {
+  const t = useTranslations('certifications')
+
   if (!certifications.length) return null
 
   return (
@@ -15,7 +20,7 @@ export default function Certifications() {
           id="certifications-heading"
           className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-8"
         >
-          Certifications
+          {t('heading')}
         </h2>
       </FadeIn>
       <div className="flex flex-wrap gap-4">
@@ -35,7 +40,7 @@ export default function Certifications() {
                   href={cert.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${cert.name} from ${cert.issuer} (opens in new tab)`}
+                  aria-label={`${cert.name} from ${cert.issuer} (${t('opensInNewTab')})`}
                   className="block hover:opacity-80 transition-opacity"
                 >
                   {card}

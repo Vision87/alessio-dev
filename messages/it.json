@@ -1,0 +1,60 @@
+{
+  "skip": "Vai al contenuto principale",
+  "nav": {
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "experience": "Esperienza",
+    "projects": "Progetti",
+    "contact": "Contatti"
+  },
+  "langSwitcher": {
+    "label": "Cambia lingua",
+    "en": "EN",
+    "it": "IT",
+    "ja": "JP"
+  },
+  "hero": {
+    "greeting": "Ciao, sono",
+    "tagline": "Oltre 15 anni di esperienza nella realizzazione di soluzioni web innovative e nella guida di team di ingegneria internazionali.",
+    "downloadCv": "Scarica il CV",
+    "email": "Email",
+    "githubAmoioliLabel": "Profilo GitHub AMoioli (si apre in una nuova scheda)",
+    "githubVision87Label": "Profilo GitHub Vision87 (si apre in una nuova scheda)",
+    "linkedinLabel": "Profilo LinkedIn (si apre in una nuova scheda)",
+    "cvLabel": "Scarica il CV in PDF"
+  },
+  "about": {
+    "heading": "Chi sono",
+    "text": "Sono un appassionato Software Engineering Manager in Paramount, dove guido team di sviluppo internazionali per realizzare progetti web su larga scala e soluzioni digitali globali. Con oltre un decennio di esperienza nel settore dello sviluppo software, mi sono affermato come leader tecnico versatile con un forte focus sulla creazione di flussi di lavoro efficienti e pipeline di ingegneria ad alte prestazioni. Attualmente residente nell'area metropolitana di Milano, supervisiono iniziative ingegneristiche complesse nel panorama mediatico globale, avendo precedentemente ricoperto il ruolo di Lead Software Engineer per una grande organizzazione di intrattenimento internazionale. La mia carriera è caratterizzata da un solido track record presso aziende di media e tecnologia di fama mondiale, dove ho svolto un ruolo chiave nello sviluppo di architetture web robuste e nella gestione dell'esecuzione tecnica di progetti digitali su larga scala, come il lancio globale della piattaforma Paramount+. La mia precedente esperienza come Web and Mobile Developer Consultant ha ulteriormente ampliato la mia expertise su più piattaforme e stack tecnologici diversificati. Professionista curioso e metodico, mi specializzo nelle tecnologie web moderne tra cui GraphQL, React.js, TypeScript e Next.js. Sono particolarmente riconosciuto per la mia capacità di favorire la collaborazione tra culture e fusi orari diversi, sfruttando il dialogo aperto per guidare l'innovazione e ottenere risultati superiori. La mia filosofia di leadership si basa sul valore delle prospettive diverse e sulla crescita professionale continua dei miei team. Viaggiatore frequente e studente per tutta la vita, rimango dedicato alla scoperta di nuove prospettive che accendono curiosità e creatività nel mondo in continua evoluzione dell'ingegneria del software."
+  },
+  "skills": {
+    "heading": "Competenze"
+  },
+  "experience": {
+    "heading": "Esperienza"
+  },
+  "projects": {
+    "heading": "Progetti",
+    "tabsLabel": "Account GitHub",
+    "viewProject": "Vedi Progetto",
+    "opensInNewTab": "si apre in una nuova scheda",
+    "personal": "Personale",
+    "noProjects": "Nessun progetto ancora per"
+  },
+  "certifications": {
+    "heading": "Certificazioni",
+    "opensInNewTab": "si apre in una nuova scheda"
+  },
+  "contact": {
+    "heading": "Contatti",
+    "subtitle": "Connettiamoci.",
+    "email": "Email",
+    "emailLabel": "Invia un'email ad Alessio Moioli"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Pagina non trovata",
+    "description": "La pagina che stai cercando non esiste.",
+    "backHome": "← Torna alla home"
+  }
+}

@@ -1,7 +1,12 @@
+'use client'
+
 import { bio } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 export default function Contact() {
+  const t = useTranslations('contact')
+
   return (
     <section id="contact" aria-labelledby="contact-heading" className="py-24 px-6 max-w-4xl mx-auto text-center">
       <FadeIn>
@@ -9,11 +14,11 @@ export default function Contact() {
           id="contact-heading"
           className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-4"
         >
-          Contact
+          {t('heading')}
         </h2>
       </FadeIn>
       <FadeIn delay={0.1}>
-        <p className="text-white/70 mb-10 text-sm">Let&apos;s connect.</p>
+        <p className="text-white/70 mb-10 text-sm">{t('subtitle')}</p>
       </FadeIn>
       <FadeIn delay={0.2}>
         <div className="flex justify-center gap-8">
@@ -46,10 +51,10 @@ export default function Contact() {
           </a>
           <a
             href={`mailto:${bio.email}`}
-            aria-label="Send email to Alessio Moioli"
+            aria-label={t('emailLabel')}
             className="text-white/70 hover:text-white transition-colors text-sm"
           >
-            Email
+            {t('email')}
           </a>
         </div>
       </FadeIn>

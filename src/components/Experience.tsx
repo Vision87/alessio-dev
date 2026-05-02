@@ -1,7 +1,12 @@
+'use client'
+
 import { experience } from '@/content/data'
+import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
 export default function Experience() {
+  const t = useTranslations('experience')
+
   return (
     <section id="experience" aria-labelledby="experience-heading" className="py-24 px-6 max-w-4xl mx-auto">
       <FadeIn>
@@ -9,7 +14,7 @@ export default function Experience() {
           id="experience-heading"
           className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-10"
         >
-          Experience
+          {t('heading')}
         </h2>
       </FadeIn>
       <ol className="space-y-12 list-none p-0">
