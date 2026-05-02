@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from '@/components/Navbar'
 import ScrollToTop from '@/components/ScrollToTop'
 import './globals.css'
@@ -69,6 +70,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ScrollToTop />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
