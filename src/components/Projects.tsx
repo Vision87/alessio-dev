@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { projects } from '@/content/data'
+import FadeIn from './FadeIn'
 
 type Account = 'AMoioli' | 'Vision87'
 
@@ -14,14 +15,17 @@ export default function Projects() {
 
   return (
     <section id="projects" aria-labelledby="projects-heading" className="py-24 px-6 max-w-4xl mx-auto">
-      <h2
-        id="projects-heading"
-        className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-8"
-      >
-        Projects
-      </h2>
+      <FadeIn>
+        <h2
+          id="projects-heading"
+          className="text-xs font-mono text-[#64b5f6] uppercase tracking-widest mb-8"
+        >
+          Projects
+        </h2>
+      </FadeIn>
 
       {/* Tabs */}
+      <FadeIn delay={0.1}>
       <div className="flex gap-1 mb-8 border-b border-white/10" role="tablist" aria-label="GitHub account">
         {TABS.map((tab) => (
           <button
@@ -40,6 +44,7 @@ export default function Projects() {
           </button>
         ))}
       </div>
+      </FadeIn>
 
       {/* Panel */}
       <div
