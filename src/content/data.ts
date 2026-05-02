@@ -12,7 +12,7 @@ export const bio = {
   location: 'Milan, Italy',
   tagline: '15+ years delivering innovative web solutions and leading international engineering teams.',
   metrics: [
-    { value: '28', label: 'Countries' },
+    { value: '28', label: 'Countries where my projects are published' },
     { value: '15+', label: 'Years' },
   ] as Metric[],
   about:
