@@ -33,7 +33,7 @@ export default function Hero() {
       </FadeIn>
       <FadeIn delay={0.1}>
         <p className="text-xl md:text-2xl text-white/70 mb-2">
-          {bio.title}{' '}
+          {t('title')}{' '}
           <span className="text-[#64b5f6]">@ {bio.company}</span>
         </p>
         <p className="text-white/60 text-sm mb-8">{t('location')}</p>

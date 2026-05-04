@@ -24,7 +24,8 @@
     "githubAmoioliLabel": "GitHub AMoioli profile (opens in new tab)",
     "githubVision87Label": "GitHub Vision87 profile (opens in new tab)",
     "linkedinLabel": "LinkedIn profile (opens in new tab)",
-    "cvLabel": "Download CV as PDF"
+    "cvLabel": "Download CV as PDF",
+    "title": "Manager Software Engineering"
   },
   "about": {
     "heading": "About",
@@ -142,7 +143,10 @@
     "viewProject": "View Project",
     "opensInNewTab": "opens in new tab",
     "personal": "Personal",
-    "noProjects": "No projects yet for"
+    "noProjects": "No projects yet for",
+    "descriptions": {
+      "Paramount+": "Global SVOD streaming platform serving subscribers across 28 countries. Contributed to frontend architecture, GraphQL API layer, and launch infrastructure."
+    }
   },
   "certifications": {
     "heading": "Certifications",

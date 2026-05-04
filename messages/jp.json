@@ -24,7 +24,8 @@
     "githubAmoioliLabel": "GitHub AMoioli プロフィール（新しいタブで開く）",
     "githubVision87Label": "GitHub Vision87 プロフィール（新しいタブで開く）",
     "linkedinLabel": "LinkedIn プロフィール（新しいタブで開く）",
-    "cvLabel": "履歴書をPDFでダウンロード"
+    "cvLabel": "履歴書をPDFでダウンロード",
+    "title": "ソフトウェアエンジニアリングマネージャー"
   },
   "about": {
     "heading": "私について",
@@ -142,7 +143,10 @@
     "viewProject": "プロジェクトを見る",
     "opensInNewTab": "新しいタブで開く",
     "personal": "個人",
-    "noProjects": "まだプロジェクトがありません："
+    "noProjects": "まだプロジェクトがありません：",
+    "descriptions": {
+      "Paramount+": "28カ国のサブスクライバーにサービスを提供するグローバルSVODストリーミングプラットフォーム。フロントエンドアーキテクチャ、GraphQL APIレイヤー、ローンチインフラに貢献。"
+    }
   },
   "certifications": {
     "heading": "資格・認定",

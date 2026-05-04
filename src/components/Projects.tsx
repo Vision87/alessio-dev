@@ -11,6 +11,7 @@ const TABS: Account[] = ['AMoioli', 'Vision87']
 
 export default function Projects() {
   const t = useTranslations('projects')
+  const descriptions = (t.raw('descriptions') as Record<string, string>) ?? {}
   const [active, setActive] = useState<Account>('AMoioli')
 
   const filtered = projects.filter((p) => p.account === active)
@@ -87,7 +88,7 @@ export default function Projects() {
                   )}
                 </div>
                 <p className="text-white/70 text-sm leading-relaxed flex-1">
-                  {project.description}
+                  {descriptions[project.title] ?? project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
