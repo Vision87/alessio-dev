@@ -74,7 +74,7 @@ export default function Navbar() {
                     : 'text-white/40 hover:text-white/70'
                 }`}
               >
-                {tLang(l as 'en' | 'it' | 'ja')}
+                {tLang(l as 'en' | 'it' | 'jp')}
               </a>
             ))}
           </div>
