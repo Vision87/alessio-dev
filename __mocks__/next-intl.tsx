@@ -15,8 +15,19 @@ const lookup = (namespace: string | undefined, key: string): string => {
   return key
 }
 
-export const useTranslations = (namespace?: string) => (key: string) =>
-  lookup(namespace, key)
+const rawLookup = (namespace: string | undefined, key: string): unknown => {
+  const root = en as AnyMessages
+  if (!namespace) return root[key]
+  const ns = root[namespace]
+  if (ns && typeof ns === 'object') return (ns as AnyMessages)[key]
+  return undefined
+}
+
+export const useTranslations = (namespace?: string) => {
+  const t = (key: string): string => lookup(namespace, key)
+  t.raw = (key: string): unknown => rawLookup(namespace, key)
+  return t
+}
 
 export const useLocale = () => 'en'
 

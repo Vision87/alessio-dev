@@ -1,11 +1,18 @@
 'use client'
 
-import { experience } from '@/content/data'
 import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 
+interface JobMessage {
+  company: string
+  role: string
+  period: string
+  bullets: string[]
+}
+
 export default function Experience() {
   const t = useTranslations('experience')
+  const jobs = (t.raw('jobs') as JobMessage[]) ?? []
 
   return (
     <section id="experience" aria-labelledby="experience-heading" className="py-24 px-6 max-w-4xl mx-auto">
@@ -18,8 +25,8 @@ export default function Experience() {
         </h2>
       </FadeIn>
       <ol className="space-y-12 list-none p-0">
-        {experience.map((job, i) => (
-          <FadeIn key={`${job.company}-${job.role}`} delay={Math.min(i * 0.07, 0.42)}>
+        {jobs.map((job, i) => (
+          <FadeIn key={`${job.company}-${job.role}-${i}`} delay={Math.min(i * 0.07, 0.42)}>
             <li className="relative border-l-2 border-[#64b5f6]/30 pl-6">
               <span
                 className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#64b5f6]/60 border-2 border-[#0d1b2a]"
