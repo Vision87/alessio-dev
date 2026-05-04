@@ -15,7 +15,10 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
+    "location": "Milan, Italy",
     "tagline": "15+ years delivering innovative web solutions and leading international engineering teams.",
+    "metricCountries": "Countries where my projects are published",
+    "metricYears": "Years of experience",
     "downloadCv": "Download CV",
     "email": "Email",
     "githubAmoioliLabel": "GitHub AMoioli profile (opens in new tab)",
@@ -28,7 +31,16 @@
     "text": "I am a passionate Software Engineering Manager at Paramount, where I lead international development teams to deliver large-scale web projects and global digital solutions. With over a decade of experience in the software development industry, I have established myself as a versatile technical leader with a deep focus on building efficient workflows and high-performing engineering pipelines. Currently based in the Greater Milan Metropolitan Area, I oversee complex engineering initiatives within the global media landscape, having previously served as a Lead Software Engineer for a major international entertainment organization. My career is marked by a strong track record at world-renowned media and technology firms, where I played a key role in developing robust web architectures and managing the technical execution of large-scale digital projects, such as the global launch of Paramount+. My earlier experience as a Web and Mobile Developer Consultant further broadened my expertise across multiple platforms and diversified tech stacks. A curious and methodical professional, I specialise in modern web technologies including GraphQL, React.js, TypeScript, and Next.js. I am particularly recognised for my ability to foster collaboration across diverse cultures and time zones, leveraging open dialogue to drive innovation and achieve superior outcomes. My leadership philosophy is built on the value of diverse perspectives and the continuous professional growth of my teams. A frequent traveller and lifelong learner, I remain dedicated to discovering new perspectives that ignite curiosity and creativity in the ever-evolving world of software engineering."
   },
   "skills": {
-    "heading": "Skills"
+    "heading": "Skills",
+    "categoryFrontend": "Frontend",
+    "categoryBackend": "Backend",
+    "categoryMobile": "Mobile",
+    "categoryTools": "Tools & Infrastructure",
+    "categoryLeadership": "Leadership",
+    "categoryLanguages": "Languages",
+    "languageItalian": "Italian (native)",
+    "languageEnglish": "English (professional)",
+    "languageJapanese": "Japanese (basic)"
   },
   "experience": {
     "heading": "Experience"

@@ -7,6 +7,21 @@ import FadeIn from './FadeIn'
 export default function Skills() {
   const t = useTranslations('skills')
 
+  const categoryLabels: Record<string, string> = {
+    'Frontend': t('categoryFrontend'),
+    'Backend': t('categoryBackend'),
+    'Mobile': t('categoryMobile'),
+    'Tools & Infrastructure': t('categoryTools'),
+    'Leadership': t('categoryLeadership'),
+    'Languages': t('categoryLanguages'),
+  }
+
+  const languageItems: Record<string, string> = {
+    'Italian (native)': t('languageItalian'),
+    'English (professional)': t('languageEnglish'),
+    'Japanese (basic)': t('languageJapanese'),
+  }
+
   return (
     <section id="skills" aria-labelledby="skills-heading" className="py-24 px-6 max-w-4xl mx-auto">
       <FadeIn>
@@ -22,13 +37,15 @@ export default function Skills() {
           <FadeIn key={group.category} delay={i * 0.08}>
             <div>
               <h3 className="text-white/60 text-xs uppercase tracking-widest mb-3">
-                {group.category}
+                {categoryLabels[group.category] ?? group.category}
               </h3>
               <ul className="flex flex-wrap gap-2 list-none p-0 m-0" role="list">
                 {group.items.map((item) => (
                   <li key={`${group.category}-${item}`}>
                     <span className="px-3 py-1 bg-[#1e3a5f] text-[#64b5f6] text-sm rounded-full border border-[#64b5f6]/20">
-                      {item}
+                      {group.category === 'Languages'
+                        ? (languageItems[item] ?? item)
+                        : item}
                     </span>
                   </li>
                 ))}

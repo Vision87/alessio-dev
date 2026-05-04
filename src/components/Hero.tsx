@@ -7,6 +7,11 @@ import FadeIn from './FadeIn'
 export default function Hero() {
   const t = useTranslations('hero')
 
+  const metricLabels: Record<string, string> = {
+    'Countries where my projects are published': t('metricCountries'),
+    'Years of experience': t('metricYears'),
+  }
+
   return (
     <section
       id="hero"
@@ -31,7 +36,7 @@ export default function Hero() {
           {bio.title}{' '}
           <span className="text-[#64b5f6]">@ {bio.company}</span>
         </p>
-        <p className="text-white/60 text-sm mb-8">{bio.location}</p>
+        <p className="text-white/60 text-sm mb-8">{t('location')}</p>
       </FadeIn>
       <FadeIn delay={0.15}>
         <p className="text-lg text-white/80 max-w-xl leading-relaxed">{t('tagline')}</p>
@@ -42,7 +47,9 @@ export default function Hero() {
             {bio.metrics.map((metric) => (
               <div key={metric.label} className="flex flex-col">
                 <span className="text-2xl font-bold text-white">{metric.value}</span>
-                <span className="text-xs text-white/50 uppercase tracking-widest">{metric.label}</span>
+                <span className="text-xs text-white/50 uppercase tracking-widest">
+                  {metricLabels[metric.label] ?? metric.label}
+                </span>
               </div>
             ))}
           </div>
