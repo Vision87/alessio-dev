@@ -43,7 +43,98 @@
     "languageJapanese": "Giapponese (elementare)"
   },
   "experience": {
-    "heading": "Esperienza"
+    "heading": "Esperienza",
+    "jobs": [
+      {
+        "company": "Paramount",
+        "role": "Manager Software Engineering",
+        "period": "ott 2022 – presente",
+        "bullets": [
+          "Coordino la direzione strategica dei progetti di ingegneria, migliorando i tempi di consegna tramite flussi di lavoro ottimizzati.",
+          "Coordinazione di agenti AI per eseguire attività semplici e complesse, aumentando la produttività e generando valore significativo.",
+          "Mentoring e sviluppo di un team internazionale diversificato di ingegneri, aumentando produttività e soddisfazione del team.",
+          "Creazione e discussione di ADR per supportare gli obiettivi dei team di business e di prodotto.",
+          "Supporto ai team di prodotto su stack moderni (Next.js, React, GraphQL, TypeScript, Module Federation, TanStack) e legacy (PHP, Nginx, Vue.js)."
+        ]
+      },
+      {
+        "company": "Paramount",
+        "role": "Lead Software Engineer",
+        "period": "feb 2022 – ott 2022",
+        "bullets": [
+          "Progettato e implementato architettura modulare con Next.js, migliorando la riusabilità del codice e riducendo i tempi di sviluppo.",
+          "Definito le best practice TypeScript per sviluppatori junior, aumentando la competenza del team e riducendo i tempi di onboarding.",
+          "Guidato l'integrazione di Docker nella pipeline di sviluppo, semplificando i deployment e minimizzando i downtime."
+        ]
+      },
+      {
+        "company": "ViacomCBS",
+        "role": "Lead Software Engineer",
+        "period": "ott 2021 – feb 2022",
+        "bullets": [
+          "Guidato la migrazione di sistemi legacy a framework moderni, migliorando performance ed esperienza utente.",
+          "Implementato metodologie Agile che hanno portato a un aumento del 50% dell'efficienza di consegna tra più team.",
+          "Mentoring degli ingegneri sulla qualità del codice, con una riduzione del 30% delle escalation sul debito tecnico."
+        ]
+      },
+      {
+        "company": "Viacom",
+        "role": "Software Engineer",
+        "period": "nov 2019 – ott 2021",
+        "bullets": [
+          "Sviluppato e mantenuto applicazioni web con PHP e JavaScript, fornendo soluzioni scalabili.",
+          "Partecipato alla transizione verso CI/CD, abilitando rilasci più tempestivi e riducendo i bug in produzione del 20%.",
+          "Collaborato con gli stakeholder per chiarire i requisiti e fornire insight tecnici."
+        ]
+      },
+      {
+        "company": "Viacom",
+        "role": "Software Developer",
+        "period": "dic 2016 – nov 2019",
+        "bullets": [
+          "Contribuito allo sviluppo di prodotti digitali attraverso coding, testing e code review.",
+          "Implementato standard di codifica che hanno migliorato significativamente la qualità del codice nel team.",
+          "Interagito con i clienti per raccogliere feedback e adattare le applicazioni ai requisiti in evoluzione."
+        ]
+      },
+      {
+        "company": "T4 PROJECT",
+        "role": "Web & Mobile Developer Consultant",
+        "period": "giu 2013 – nov 2019",
+        "bullets": [
+          "Fornito consulenza specialistica sullo sviluppo di applicazioni web e mobile per diversi clienti.",
+          "Consegnato soluzioni di alta qualità sfruttando tecnologie all'avanguardia, aumentando il coinvolgimento dei clienti.",
+          "Condotto sessioni di formazione per i team dei clienti su nuove tecnologie e processi."
+        ]
+      },
+      {
+        "company": "Dodicitrenta Digital Creative Studio",
+        "role": "Web Developer",
+        "period": "mar 2011 – giu 2013",
+        "bullets": [
+          "Progettato e implementato siti web responsive focalizzati su user experience e accessibilità.",
+          "Gestito più progetti contemporaneamente, garantendo la consegna puntuale secondo le specifiche del cliente."
+        ]
+      },
+      {
+        "company": "Interjob",
+        "role": "Web Developer",
+        "period": "apr 2010 – mar 2011",
+        "bullets": [
+          "Sviluppato e mantenuto applicazioni web con PHP, MySQL e JavaScript.",
+          "Ottimizzato il codice esistente e implementato best practice durante tutto il ciclo di sviluppo."
+        ]
+      },
+      {
+        "company": "S3-Store",
+        "role": "Junior Web Developer",
+        "period": "gen 2009 – gen 2010",
+        "bullets": [
+          "Assistito nella creazione di applicazioni HTML interattive e condotto testing e debugging.",
+          "Collaborato con sviluppatori senior per apprendere le best practice, assumendo gradualmente attività indipendenti."
+        ]
+      }
+    ]
   },
   "projects": {
     "heading": "Progetti",
