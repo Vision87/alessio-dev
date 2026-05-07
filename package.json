@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-og.mjs && next build",
+    "generate-og": "node scripts/generate-og.mjs",
     "start": "next start",
     "lint": "eslint .",
     "test": "jest",
@@ -30,6 +31,7 @@
     "eslint-config-next": "16.2.4",
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
