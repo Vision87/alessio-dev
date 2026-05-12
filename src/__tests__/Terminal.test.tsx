@@ -30,13 +30,13 @@ describe('Terminal', () => {
 
   it('opens on backtick keydown', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
     expect(screen.getByRole('dialog')).toBeInTheDocument()
   })
 
   it('closes on Escape', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
     expect(screen.getByRole('dialog')).toBeInTheDocument()
     fireEvent.keyDown(window, { key: 'Escape' })
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
@@ -44,13 +44,13 @@ describe('Terminal', () => {
 
   it('shows welcome message when opened', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
     expect(screen.getByText(/Alessio's Portfolio Terminal/)).toBeInTheDocument()
   })
 
   it('executes the help command', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
 
     const input = screen.getByRole('textbox', { name: /terminal input/i })
     fireEvent.change(input, { target: { value: 'help' } })
@@ -62,7 +62,7 @@ describe('Terminal', () => {
 
   it('shows error for unknown command', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
 
     const input = screen.getByRole('textbox', { name: /terminal input/i })
     fireEvent.change(input, { target: { value: 'foobar' } })
@@ -73,7 +73,7 @@ describe('Terminal', () => {
 
   it('executes the whoami command', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
 
     const input = screen.getByRole('textbox', { name: /terminal input/i })
     fireEvent.change(input, { target: { value: 'whoami' } })
@@ -84,7 +84,7 @@ describe('Terminal', () => {
 
   it('closes via the close button', () => {
     renderWithIntl(<Terminal />)
-    fireEvent.keyDown(window, { key: '`' })
+    fireEvent.keyDown(window, { key: '^' })
     expect(screen.getByRole('dialog')).toBeInTheDocument()
 
     fireEvent.click(screen.getByRole('button', { name: /close terminal/i }))

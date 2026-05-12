@@ -224,7 +224,7 @@ export default function Terminal() {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName
-      if (e.key === '`' && tag !== 'INPUT' && tag !== 'TEXTAREA' && !e.ctrlKey && !e.metaKey) {
+      if (e.key === '^' && tag !== 'INPUT' && tag !== 'TEXTAREA' && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()
         setIsOpen((v) => {
           if (!v) fireAchievement('terminal_opened')
@@ -348,7 +348,7 @@ export default function Terminal() {
           <span className="text-white/20 text-xs font-mono">
             press{' '}
             <kbd className="px-1 py-0.5 bg-white/10 rounded text-white/25 text-xs not-italic">
-              `
+              ^
             </kbd>{' '}
             for terminal
           </span>
