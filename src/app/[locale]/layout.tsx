@@ -8,6 +8,7 @@ import { routing } from '@/i18n/routing'
 import { bio } from '@/content/data'
 import Navbar from '@/components/Navbar'
 import ScrollToTop from '@/components/ScrollToTop'
+import Terminal from '@/components/Terminal'
 import '../globals.css'
 
 const inter = Inter({ subsets: ['latin'], display: 'optional' })
@@ -114,6 +115,7 @@ export default async function LocaleLayout({
           <Navbar />
           {children}
           <ScrollToTop />
+          <Terminal />
           <Analytics />
           <script
             type="application/ld+json"
