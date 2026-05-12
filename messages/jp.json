@@ -158,6 +158,16 @@
     "email": "メール",
     "emailLabel": "Alessio Moioliにメールを送る"
   },
+  "github": {
+    "heading": "GitHub活動",
+    "contributions": "今年のコントリビューション",
+    "repos": "パブリックリポジトリ",
+    "stars": "スター数",
+    "contributionsShort": "コントリビューション",
+    "reposShort": "リポジトリ",
+    "topLanguages": "主要言語",
+    "buildTime": "統計情報はビルド時に取得されます。"
+  },
   "notFound": {
     "code": "404",
     "title": "ページが見つかりません",

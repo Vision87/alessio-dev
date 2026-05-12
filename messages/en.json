@@ -158,6 +158,16 @@
     "email": "Email",
     "emailLabel": "Send email to Alessio Moioli"
   },
+  "github": {
+    "heading": "GitHub Activity",
+    "contributions": "Contributions this year",
+    "repos": "Public repos",
+    "stars": "Stars earned",
+    "contributionsShort": "contributions",
+    "reposShort": "repos",
+    "topLanguages": "Top languages",
+    "buildTime": "Stats fetched at build time · updates on every deploy."
+  },
   "notFound": {
     "code": "404",
     "title": "Page not found",
