@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { routing } from '@/i18n/routing'
+import { fireAchievement } from '@/lib/achievements'
 
 export default function Navbar() {
   const t = useTranslations('nav')
@@ -68,6 +69,7 @@ export default function Navbar() {
                 key={l}
                 href={`/${l}/`}
                 aria-current={l === locale ? 'true' : undefined}
+                onClick={() => { if (l !== locale) fireAchievement('language_changed') }}
                 className={`text-xs px-2 py-1 rounded transition-colors font-mono ${
                   l === locale
                     ? 'text-[#64b5f6] bg-[#64b5f6]/10 font-semibold'

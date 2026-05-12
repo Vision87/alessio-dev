@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { bio, experience, projects, skills } from '@/content/data'
+import { ACHIEVEMENTS, fireAchievement, getUnlocked } from '@/lib/achievements'
 
 // ─── output builders ──────────────────────────────────────────────────────────
 
@@ -20,6 +21,7 @@ function helpOutput(): string[] {
     '  contact                Contact details',
     '  git log                Recent commits',
     '  neofetch               System info',
+    '  passport               View your visitor passport',
     '  clear                  Clear the terminal',
     '  exit                   Close the terminal',
     '',
@@ -135,6 +137,23 @@ function gitLogOutput(): string[] {
   ]
 }
 
+function passportOutput(): string[] {
+  const unlocked = getUnlocked()
+  const lines = ACHIEVEMENTS.map((a) => {
+    const earned = unlocked.includes(a.id)
+    return `  ${earned ? a.icon : '🔒'}  ${a.title.padEnd(18)} ${earned ? a.description : '???'}`
+  })
+  return [
+    '',
+    '  VISITOR PASSPORT',
+    '  ──────────────────────────────────────────────────',
+    ...lines,
+    '',
+    `  ${unlocked.length} / ${ACHIEVEMENTS.length} stamps collected`,
+    '',
+  ]
+}
+
 function neofetchOutput(): string[] {
   return [
     '',
@@ -207,7 +226,10 @@ export default function Terminal() {
       const tag = (e.target as HTMLElement).tagName
       if (e.key === '`' && tag !== 'INPUT' && tag !== 'TEXTAREA' && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()
-        setIsOpen((v) => !v)
+        setIsOpen((v) => {
+          if (!v) fireAchievement('terminal_opened')
+          return !v
+        })
       }
       if (e.key === 'Escape') setIsOpen(false)
     }
@@ -241,7 +263,7 @@ export default function Terminal() {
     let isError = false
 
     switch (cmd) {
-      case 'help':        output = helpOutput(); break
+      case 'help':        output = helpOutput(); fireAchievement('terminal_help'); break
       case 'whoami':      output = whoamiOutput(); break
       case 'ls':          output = lsOutput(args); break
       case 'cat':         output = catOutput(args); break
@@ -277,6 +299,9 @@ export default function Terminal() {
         break
       case 'date':
         output = ['', `  ${new Date().toUTCString()}`, '']
+        break
+      case 'passport':
+        output = passportOutput()
         break
       default:
         output = ['', `  command not found: ${cmd}`, "  Type 'help' to see available commands.", '']

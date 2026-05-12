@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { projects } from '@/content/data'
 import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
+import { fireAchievement } from '@/lib/achievements'
 
 type Account = 'AMoioli' | 'Vision87'
 
@@ -107,6 +108,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     aria-label={`${t('viewProject')} ${project.title} (${t('opensInNewTab')})`}
                     className="text-[#64b5f6] text-sm hover:underline mt-auto"
+                    onClick={() => fireAchievement('project_clicked')}
                   >
                     {t('viewProject')}<span aria-hidden="true"> →</span>
                   </a>

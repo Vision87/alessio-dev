@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { bio } from '@/content/data'
 import Navbar from '@/components/Navbar'
+import Passport from '@/components/Passport'
 import ScrollToTop from '@/components/ScrollToTop'
 import Terminal from '@/components/Terminal'
 import '../globals.css'
@@ -115,6 +116,7 @@ export default async function LocaleLayout({
           <Navbar />
           {children}
           <ScrollToTop />
+          <Passport />
           <Terminal />
           <Analytics />
           <script

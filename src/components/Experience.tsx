@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import FadeIn from './FadeIn'
+import { fireAchievement } from '@/lib/achievements'
 
 interface JobMessage {
   company: string
@@ -136,6 +137,12 @@ export default function Experience() {
       buttonRefs.current[activeIndex]?.focus({ preventScroll: false })
     }
   }, [activeIndex])
+
+  // Achievement tracking: fire on first entry visit; fire all when every entry visited
+  useEffect(() => {
+    if (visited.length > 0) fireAchievement('experience_opened')
+    if (visited.length === jobs.length) fireAchievement('experience_all')
+  }, [visited, jobs.length])
 
   return (
     <section

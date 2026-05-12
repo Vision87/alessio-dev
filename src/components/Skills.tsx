@@ -5,6 +5,7 @@ import { skills } from '@/content/data'
 import { useTranslations } from 'next-intl'
 import FadeIn from './FadeIn'
 import SkillsRadar from './SkillsRadar'
+import { fireAchievement } from '@/lib/achievements'
 
 // Subjective proficiency values (0–100) used to draw the radar chart.
 const PROFICIENCY: Record<string, number> = {
@@ -38,6 +39,7 @@ export default function Skills() {
   const categories = skills.map((g) => g.category)
 
   function handleSelect(cat: string) {
+    fireAchievement('skills_radar')
     setActiveCategory((prev) => (prev === cat ? null : cat))
   }
 
